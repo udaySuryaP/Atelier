@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", serif;
+    color: white;
+}
+.navbar{
+    height: 86px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 70px;
+}
+.navbar img{
+    width: 100px;
+    height: 86px;
+    background-color: red;
+}
+.navbar_center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+.navbar_center li{
+    text-decoration: none;
+    list-style: none;
+}
+.navbar_center li a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;l
+}
+.hero_main{
+    font-size: 80px;
+    font-weight: 500;
+}
+.hero_sub{
+    font-size: 22px;
+    font-weight: 200;
+}
+.bg{
+    background-color: black;
+    width: 90vw;
+    height: 100vh;
+    position:absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+.highlight{
+    margin: 0px 58px;
+    margin-top: 97px;
+}
+.hg_main{
+    font-size: 58px;
+    font-weight: 500;
+}
+.hg_sub{
+    font-size: 25px;
+    font-weight: 200;
+    max-width: 73%;
+    margin-top: 34px;
+}
+
+.hg_dis{
+    margin-top: 34px;
+}
+.hg_dis_l1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 13px;
+}
+.highlight img{
+    border-radius: 20px;
+}
+.hg_dis_li_img_1{
+    background-color: white;
+    height: 40vw;
+    width: 40vw;
+}
+.hg_dis_li_img_2{
+    background-color: white;
+    height:40vw;
+    width: 25vw;
+}
+.hg_dis_l2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+.hg_dis_l2_l1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.hg_dis_l2_l1 img{
+    width:26.5vw;
+    height: 19.5vw;
+    background-color: white;
+}
+
+.hg_dis_l2_l2 img{
+    width: 36vw;
+    height: 40vw;
+    background-color: white;
+    margin-left: 13px;
+}
+.ser{
+    margin-top: 97px;
+    margin-left: 58px;
+    margin-right: 58px;
+}
+.ser_head_main{
+    font-size: 58px;
+    font-weight: 500;
+    text-align: center;
+}
+.ser_head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ser_head_sub{
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    max-width: 90%;
+}
+.ser_img{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 13px;
+    margin-top: 13px;
+}
+.ser_img img{
+    width: 100%;
+    height: 40vh;
+    background-color: white;
+    border-radius: 20px;
+}
+.tes_top{
+    margin: 0px 58px;
+    margin-top: 97px;
+}
+.tes_top_main{
+    font-size: 58px;
+    font-weight: 500;
+}
+.tes_top_sub{
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 36px;
+}
+.tes_bot_mar_container{
+    margin-top: 36px;
+}
+.tes_bot_mar_box_cont{
+    display: flex;
+    gap: 24px;
+}
+.tes_bot_mar{
+    padding: 23px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #0D0D0D;
+    max-width: 40vw;
+    border-radius: 20px;
+}
+.tes_bot_mar_user{
+    display: flex;
+    align-items: center;
+    background-color: #0D0D0D;
+}
+.tes_bot_mar_user img{
+    width: 78px;
+    height: 78px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: white;
+}
+.tes_bot_mar_user_det_name{
+    font-size: 22px;
+    font-weight: 400;
+    background-color: #0D0D0D;
+}
+.tes_bot_mar_user_det_sub{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #0D0D0D;
+}
+.tes_bot_mar_cmt{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 36px;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    background-color: #0D0D0D;
+}
