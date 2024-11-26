@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -12,6 +11,7 @@ body{
     padding: 0px;
     font-family: "Inter", serif;
     color: white;
+    overflow-x: hidden;
 }
 .navbar{
     height: 86px;
@@ -52,7 +52,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center ;l
+    align-items:center ;
 }
 .hero_main{
     font-size: 80px;
@@ -127,8 +127,7 @@ body{
 .hg_dis_l2_l2 img{
     width: 36vw;
     height: 40vw;
-    background-color: white;
-    margin-left: 13px;
+    background-color: red;
 }
 .ser{
     margin-top: 97px;
@@ -176,14 +175,10 @@ body{
     font-size: 24px;
     font-weight: 300;
     margin-top: 36px;
+    margin-bottom:20px ;
 }
-.tes_bot_mar_container{
-    margin-top: 36px;
-}
-.tes_bot_mar_box_cont{
-    display: flex;
-    gap: 24px;
-}
+
+
 .tes_bot_mar{
     padding: 23px 14px;
     display: flex;
@@ -193,6 +188,7 @@ body{
     background-color: #0D0D0D;
     max-width: 40vw;
     border-radius: 20px;
+    margin-left: 13px;
 }
 .tes_bot_mar_user{
     display: flex;
@@ -225,4 +221,214 @@ body{
     word-wrap: break-word; 
     overflow-wrap: break-word; 
     background-color: #0D0D0D;
+}
+.container {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+
+  .scroll-container{
+    height: fit-content;
+    margin-top:-100px ;
+  }
+  .carousel-primary,
+  .carousel-secondary {
+    top: 26%;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+
+  .carousel-primary {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll-horizontal 20s linear infinite;
+  }
+  
+  .carousel-secondary {
+    animation: scroll-horizontal 20s linear infinite;
+    animation-delay: 10s;
+    top: -24%;
+  }
+  
+  @keyframes scroll-horizontal {
+    0% {
+      left: 100%;
+    }
+  
+    100% {
+      left: -100%;
+    }
+  }
+  
+  .carousel-primary:hover,
+  .carousel-primary:hover~.carousel-secondary {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+  .carousel-secondary:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+  
+  .scroll-container:hover>.carousel-primary:not(:hover) {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 0px 58px;
+}
+
+.contact-s-2{
+    flex: 1;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.contact-s-2 p{
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+}
+.contact-s-2-collab{
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 98px;
+}
+.contact-s-2-details-top{
+    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+.contact-s-2-details-top input{
+    flex: 1;
+    border: none;
+    border-bottom: 1px white solid ;
+    outline: none;
+    padding:20px 0px ;
+    font-family: "Inter";
+    font-size: 14px;
+}
+.contact-s-2-details-top input::placeholder , .contact-s-2-msg::placeholder{
+    color: white;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 200;
+    opacity: 1;
+}
+.contact-s-2-msg{
+    border: none;
+    border-bottom: 1px white solid ;
+    outline: none;
+    padding:20px 0px ;
+    outline: none;
+    font-family: "Inter";
+    font-size: 14px;
+    margin-top: 20px;
+}
+.contact-s-2-submit{
+    background-color: white;
+    padding: 10px 30px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 30px;
+    transition: 0.3s;
+    height: 31px;
+    width: 200px;
+}
+.contact-s-2-submit button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-right:20px ;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+}
+.contact-s-2-submit-icon{
+    width: 30px;
+    height: 10px;
+    background-image: url('./assets/icons/Arrow\ 3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* .contact-s-2-submit:hover{
+    background-color: white;
+    border: 1px #2667FF solid;
+}
+.contact-s-2-submit:hover button{
+    color: #2667FF;
+} */
+
+.contact-s-3{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 40px;
+    
+    width: 100vw;
+    border-bottom: 1px black solid;
+}
+.contact-s-3 a{
+    color: black;
+    font-weight: 200;
+    text-decoration: none;
+}
+.contact-s-4{
+    width: 100vw;
+    margin: 50px;
+}
+.contact-s-4 p{
+    font-weight: 200;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 42px;
+}
+footer img{
+    width: 200px;
+    height: 92px;
+    background-color: white;
+}
+.foot_quote{
+    margin-top:21px ;
+    margin-bottom: 30px;
+    max-width: 60%;
+    text-align: center;
 }
