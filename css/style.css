@@ -2,7 +2,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: black;
 }
 
 
@@ -12,6 +11,7 @@ body{
     font-family: "Inter", serif;
     color: white;
     overflow-x: hidden;
+    background-color: black;
 }
 .navbar{
     height: 86px;
@@ -20,11 +20,16 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: 0px 70px;
+    position: absolute;
+    width: 90vw;
+    top: 0px;
+    background-color: #ffffff00;
 }
 .navbar img{
-    width: 100px;
+    width: auto;
     height: 86px;
-    background-color: red;
+    margin-left: -5vh;
+    background-color: #ffffff00;
 }
 .navbar_center{
     display: flex;
@@ -32,20 +37,35 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 40vw;
+    background-color: #ffffff00;
 }
 .navbar_center li{
     text-decoration: none;
     list-style: none;
+    background-color: #ffffff00;
+
 }
 .navbar_center li a{
     color: white;
     text-decoration: none;
+    background-color: #ffffff00;
 }
 
 .navbar a{
     color: white;
     text-decoration: none;
+    background-color: transparent;
 }
+.video-container{
+    position: absolute;
+    z-index: -1;
+    top: -140px;
+    background-color: black;
+    width: 120vw;
+    height: 135vh;
+    object-fit: cover;
+}
+
 .hero{
     height: 100vh;
     width: 100%;
@@ -53,18 +73,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items:center ;
+    background-color: #ffffff00;
 }
 .hero_main{
     font-size: 80px;
     font-weight: 500;
+    background-color: #ffffff00;
 }
 .hero_sub{
     font-size: 22px;
     font-weight: 200;
+    background-color: #ffffff00;
 }
 .bg{
-    background-color: black;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     position:absolute;
     top: 0px;
@@ -74,17 +96,13 @@ body{
 .highlight{
     margin: 0px 58px;
     margin-top: 97px;
+    background-color: black;
 }
 .hg_main{
     font-size: 58px;
     font-weight: 500;
 }
-.hg_sub{
-    font-size: 25px;
-    font-weight: 200;
-    max-width: 73%;
-    margin-top: 34px;
-}
+
 
 .hg_dis{
     margin-top: 34px;
@@ -118,6 +136,7 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .hg_dis_l2_l1 img{
     width:26.5vw;
     height: 19.5vw;
@@ -127,7 +146,7 @@ body{
 .hg_dis_l2_l2 img{
     width: 36vw;
     height: 40vw;
-    background-color: red;
+    background-color: white;
 }
 .ser{
     margin-top: 97px;
@@ -162,6 +181,19 @@ body{
     height: 40vh;
     background-color: white;
     border-radius: 20px;
+}
+.ser_img_container{
+    overflow: hidden;
+    border-radius:15px ;
+    background-size: cover;
+}
+.ser_img_container p{
+    font-size: 36px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.452);
+    padding-top: 200px;
+    padding-left: 17px;
+    padding-bottom: 13px;
 }
 .tes_top{
     margin: 0px 58px;
@@ -223,71 +255,49 @@ body{
     background-color: #0D0D0D;
 }
 .container {
-    display: flex;
-    width: 100vw;
-    overflow: hidden;
+    overflow: scroll;
+    margin-top: 57px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
   
-
-  .scroll-container{
-    height: fit-content;
-    margin-top:-100px ;
-  }
-  .carousel-primary,
-  .carousel-secondary {
-    top: 26%;
-    left: 100%;
-    width: 100%;
-    overflow: hidden;
+.scroll-container{
+    display: flex;
+    overflow-x: scroll;
+    width: fit-content;
+    gap: 13px;
+}
+.reel_container img{
+    width: 300px;
+    height: 550px;
+    border-radius:24px ;
     position: relative;
-    white-space: nowrap;
-  }
-  
-
-  .carousel-primary {
+    top: 0px;
     display: flex;
-    justify-content: space-around;
-    animation: scroll-horizontal 20s linear infinite;
-  }
-  
-  .carousel-secondary {
-    animation: scroll-horizontal 20s linear infinite;
-    animation-delay: 10s;
-    top: -24%;
-  }
-  
-  @keyframes scroll-horizontal {
-    0% {
-      left: 100%;
-    }
-  
-    100% {
-      left: -100%;
-    }
-  }
-  
-  .carousel-primary:hover,
-  .carousel-primary:hover~.carousel-secondary {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
-  }
-  
-  .carousel-secondary:hover {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
-  }
-  
-  
-  .scroll-container:hover>.carousel-primary:not(:hover) {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
-  }
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+.reel_container video{
+    width: 300px;
+    height: 550px;
+    position: relative;
+    transition: 0.3s;
+    display: none;
+    visibility: none;
+    opacity: 0;
+}
+.reel_container iframe{
+    width: 300px;
+    height: 550px;
+    position: relative;
+    transition: 0.3s;
+    display: none;
+    visibility: none;
+    opacity: 0;
+}
+
+
 
   .contact{
     display: flex;
@@ -332,6 +342,7 @@ body{
     padding:20px 0px ;
     font-family: "Inter";
     font-size: 14px;
+    background-color: black;
 }
 .contact-s-2-details-top input::placeholder , .contact-s-2-msg::placeholder{
     color: white;
@@ -349,6 +360,7 @@ body{
     font-family: "Inter";
     font-size: 14px;
     margin-top: 20px;
+    background-color: black;
 }
 .contact-s-2-submit{
     background-color: white;
@@ -361,7 +373,7 @@ body{
     border-radius: 30px;
     transition: 0.3s;
     height: 31px;
-    width: 200px;
+    width: fit-content;
 }
 .contact-s-2-submit button{
     background-color: rgba(255, 255, 255, 0);
@@ -424,7 +436,6 @@ footer{
 footer img{
     width: 200px;
     height: 92px;
-    background-color: white;
 }
 .foot_quote{
     margin-top:21px ;
