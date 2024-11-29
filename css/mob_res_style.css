@@ -11,10 +11,40 @@ body{
     height: 47px;
     margin-left: 1vh;
 }
-.navbar_center{
+.navbar_center_mob{
+    display: flex;
+    flex-direction:column ;
+    position: fixed;
+    background-color: black;
+    /* height: 100vh; */
+    padding-top: 150px;
+    padding-bottom: 1000px;
+    padding-right: 80px;
+    padding-left: 80px;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    transition: 0.3s;
+}
+.navbar_center_mob li{
+    text-decoration: none;
+    list-style: none;
+    font-weight: 500;
+    background-color: #ffffff00;
+    margin-top: 20px;
+    text-align: right;
+}
+.navbar_center_mob li a{
+    color: white;
+    text-decoration: none;
+    background-color: #00000000;
+}
+
+
+.navbar a{
     display: none;
 }
-.navbar a{
+.nav_con{
     display: none;
 }
 .nav_ham{
@@ -22,6 +52,23 @@ body{
    background-color: #000000;
    border: 0px black solid;
    margin-right: 25px;
+}
+.nav_cross{
+    display: flex;
+    width: 100px;
+    height: auto;
+    position: fixed;
+    z-index: 5;
+    top: 50px;
+    right: 10px;
+    background-color: #00000000;
+    border: 0px white solid;
+    transition: 0.3s;
+}
+.nav_cross img{
+    width: 50px;
+    height: auto;
+    transform: rotate(180deg);
 }
 .nav_ham img{
    width: auto;
@@ -285,27 +332,10 @@ body{
     margin-top: 20px;
     background-color: black;
 }
-.contact-s-2-submit{
-    background-color: white;
-    padding: 10px 30px;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    border-radius: 30px;
-    transition: 0.3s;
-    height: 31px;
-    width: fit-content;
-}
-.contact-s-2-submit button{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    margin-right:20px ;
-    font-size: 14px;
-    font-weight: 300;
+.submit p{
     color: black;
 }
+
 .contact-s-2-submit-icon{
     width: 30px;
     height: 10px;
@@ -313,39 +343,7 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 }
-/* .contact-s-2-submit:hover{
-    background-color: white;
-    border: 1px #2667FF solid;
-}
-.contact-s-2-submit:hover button{
-    color: #2667FF;
-} */
 
-.contact-s-3{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 40px;
-    
-    width: 100vw;
-    border-bottom: 1px black solid;
-}
-.contact-s-3 a{
-    color: black;
-    font-weight: 200;
-    text-decoration: none;
-}
-.contact-s-4{
-    width: 100vw;
-    margin: 50px;
-}
-.contact-s-4 p{
-    font-weight: 200;
-    text-align: center;
-    font-size: 14px;
-}
 
 footer{
     display: flex;
@@ -359,6 +357,7 @@ footer{
 footer img{
     width: 200px;
     height: 92px;
+    margin-left: -20px;
 }
 .foot_quote{
     margin-top:21px ;

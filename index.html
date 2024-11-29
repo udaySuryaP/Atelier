@@ -10,6 +10,15 @@
 </head>
 <body>
     
+    <ul id="navbar_center_mob" class="navbar_center_mob" >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+    <button onclick="navToggle()" id="nav_cross" class="nav_cross" ><img src="./assets/img/Arrow_4_white.png" alt=""></button>
+
     <section data-aos="fade-up" class="hero" >
         <section class="navbar" >
             <img src="./assets/img/Navbar_brand.png" alt="">
@@ -20,8 +29,8 @@
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
-            <a href="#">Contact Us</a>
-            <button class="nav_ham" ><img src="./assets/img/ham.png" alt=""></button>
+            <a class="nav_con" href="#">Contact Us</a>
+            <button onclick="navToggle()" class="nav_ham" ><img src="./assets/img/ham.png" alt=""></button>
         </section>
         <p class="hero_main" >Crafting Stories, Building Brands.</p>
         <p class="hero_sub" >We bring your ideas to life with creativity that stands out.</p>
@@ -50,8 +59,8 @@
         </div>
     </section>
     <section class="highlight" >
-        <p data-aos="fade-up" class="hg_main">Together in the Spotlight: Stories <br> Through Our Lens.</p>
-        <p data-aos="fade-up" class="hg_sub">Step into a world where creativity meets collaboration. Explore our handpicked highlights of photography and videography, showcasing the magic we’ve created together with our clients. Every shot, every frame tells a story—your story, brought to life with passion and precision.</p>
+        <!-- <p data-aos="fade-up" class="hg_main">Together in the Spotlight: Stories <br> Through Our Lens.</p>
+        <p data-aos="fade-up" class="hg_sub">Step into a world where creativity meets collaboration. Explore our handpicked highlights of photography and videography, showcasing the magic we’ve created together with our clients. Every shot, every frame tells a story—your story, brought to life with passion and precision.</p> -->
 
 
         <div class="hg_dis">
@@ -175,11 +184,12 @@
             </div>
         </div>
     </section> -->
+
     <section data-aos="fade-up" class="container container_2">
-        <div class="scroll-container">
+        <div id="scroll_container" class="scroll-container">
             <div id="reel_container_1" class="reel_container">
                 <img id="reel_img_1" src="./assets/img/Brawny_Dining_THUMB.jpg" alt="">
-                <iframe id="reel_video_1" src="https://drive.google.com/file/d/1KdUZoqmOkffOwGLlcmZFvDitgjtU5mvn/preview" frameborder="0"></iframe>
+                <iframe id="reel_video_1" src="https://drive.google.com/file/d/1KdUZoqmOkffOwGLlcmZFvDitgjtU5mvn/preview?&autoplay=1" frameborder="0"></iframe>
             </div>
             <div id="reel_container_2" class="reel_container">
                 <img id="reel_img_2" src="./assets/img/ash hopper thumb.jpg" alt="">
@@ -215,7 +225,6 @@
             </div>
         </div>
     </section>
-
     <section data-aos="fade-up" class="contact" >
         <div data-aos="fade-up" class="contact-s-2">
             <p  >Let’s talk about <br> <span class="contact-s-2-collab" >Collaboration</span> </p>
@@ -225,10 +234,10 @@
                 <input type="text" id="msg-phone" placeholder="Phone Number">
             </div>
             <textarea  id="msg-msg" class="contact-s-2-msg" rows="3" placeholder="Message"></textarea>
-            <div id="submit-overlay" class="contact-s-2-submit">
-                <button id="submit" >Leave us a message</button>
+            <button id="submit"class="submit" >
+                <p >Send Message</p>
                 <img src="./assets/img/Arrow_4.png" alt="">
-            </div>
+            </button>
         </div>
     </section>
     
@@ -237,12 +246,15 @@
         <p class="foot_quote">Lorem ipsum odor amet, consectetuer adipiscing elit. Auctor integer consequat fusce taciti placerat aliquam. Vitae nullam ex purus ac, fermentum est egestas.</p>
         <p class="cpy_write">© 2024 All Rights Reserved, Atelier Adventures</p>
     </footer>
-
+    <div class="alert" id="alert">
+        <p id="alert_msg" >Message send successfully</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
 </body>
+
 <script>
 
 for (let i = 1; i <= 7; i++) {
@@ -275,5 +287,102 @@ for (let i = 1; i <= 7; i++) {
     });
 }
 
+var toggle = true;
+
+const navToggle = () =>{
+    if(toggle){
+        document.getElementById('navbar_center_mob').style.right = '-500px'
+        document.getElementById('nav_cross').style.right = '-100px'
+        toggle = false
+    }else{
+        document.getElementById('navbar_center_mob').style.right = '0px'
+        document.getElementById('nav_cross').style.right = '10px'
+        toggle = true
+    }
+}
+navToggle()
+
 </script>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+    import { getFirestore, collection, query, where, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+  
+    const firebaseConfig = {
+  
+        apiKey: "AIzaSyBVdTECNPVWilgl004_BEoIPeNRZy7ue2E",
+
+        authDomain: "reciprokel.firebaseapp.com",
+
+        projectId: "reciprokel",
+
+        storageBucket: "reciprokel.firebasestorage.app",
+
+        messagingSenderId: "229742685890",
+
+        appId: "1:229742685890:web:0d34df8f79bee78019d55b",
+
+        measurementId: "G-Y3W32QD1Y2"
+  
+    };
+  
+    const app = initializeApp(firebaseConfig);
+  
+    const analytics = getAnalytics(app);
+
+    const db = getFirestore();
+
+
+    document.getElementById("submit").addEventListener("click", async function() {
+        var submit = document.getElementById("submit");
+
+        submit.style.opacity = '0.3'
+
+        var input_name = document.getElementById("msg-name").value
+        var input_email = document.getElementById("msg-email").value
+        var input_phone = document.getElementById("msg-phone").value
+        var input_msg = document.getElementById("msg-msg").value
+
+        var alert = document.getElementById('alert');
+        var alert_msg = document.getElementById('alert_msg');
+        alert_msg.innerText = "Message send successfully"
+
+        console.log("button pressed")
+        
+        console.log(input_email,input_msg,input_name,input_phone);
+
+        if(input_email,input_msg,input_name){
+            try {
+                const docRef = await addDoc(collection(db, "Atelier"), {
+                    name: input_name,
+                    email: input_email,
+                    phone: input_phone,
+                    msg: input_msg
+                });
+                alert.style.right = '2%'
+                setTimeout(()=>{
+                    alert.style.right = '-150%'
+                    submit.style.opacity = '1'    
+                },1500)
+            } catch (error) {
+                console.log("Error while sending data");
+                
+            }
+        }else{
+            alert_msg.innerText = "Please complete info details before submitting..."
+            alert.style.right = '2%'
+            setTimeout(()=>{
+                    alert.style.right = '-150%'
+                    submit.style.opacity = '1'    
+                },1500)  
+        }
+        
+    });
+        
+    
+
+  
+  </script>
 </html>
