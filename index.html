@@ -25,11 +25,11 @@
             <ul class="navbar_center" >
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#ser">Services</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
-            <a class="nav_con" href="#">Contact Us</a>
+            <a class="nav_con" href="#contact">Contact Us</a>
             <button onclick="navToggle()" class="nav_ham" ><img src="./assets/img/ham.png" alt=""></button>
         </section>
         <p class="hero_main" >Crafting Stories, Building Brands.</p>
@@ -38,7 +38,7 @@
     <video data-aos="fade-up" class="video-container" autoplay muted loop>
         <source src="https://s3-figma-videos-production-sig.figma.com/video/1398712569956976635/TEAM/b59c/87f8/-dcb5-4c5a-9a79-0bad28586f59?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ge2k1dkvYuDNRxfFnb7iz0OQzl4dxLGJ5h0YOPUgLgoIsUeOF35RKyNWfYTuwB6p54HUMT9RZt2eQVV6VPY-y17ZmvyoUJ28lkadcPNDQeqiRQ0-DRFMhvxjTPYehKQqruaYslQ7dJD1f~2lo4L7ki6lrlYay6ekeTfnTifFphs8VPhjalJFPZiBwRVniQOca1vmG1P13F~VgTuqSeatrmRhHXNW4PEdd-oSw0rP4K-2YIh9FZcc0BBc5cHJNfL-NrY1y1ypMc38xht5kBm7nk3dLWcIDWaEs1Um3lDbh1e1WoXw8ADbNz~4jFcEBToI3ipLglaLe~OHJpHcjH2mCw__" type="video/mp4">
     </video>
-    <section class="ser">
+    <section id="ser" class="ser">
         <div data-aos="fade-up" class="ser_head">
             <p class="ser_head_main">We Build Brilliance, Our Services.</p>
             <p class="ser_head_sub">From concept to creation, we craft solutions that resonate. Our services include product photography, ad films, graphic design, digital marketing, and web development—delivering impactful visuals, compelling stories, and seamless digital experiences.</p>
@@ -225,7 +225,7 @@
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" class="contact" >
+    <section id="contact" data-aos="fade-up" class="contact" >
         <div data-aos="fade-up" class="contact-s-2">
             <p  >Let’s talk about <br> <span class="contact-s-2-collab" >Collaboration</span> </p>
             <div  class="contact-s-2-details-top">
@@ -256,6 +256,8 @@
 </body>
 
 <script>
+
+
 
 for (let i = 1; i <= 7; i++) {
     document.getElementById(`reel_container_${i}`).addEventListener('mouseenter', function() {
@@ -295,8 +297,8 @@ const navToggle = () =>{
         document.getElementById('nav_cross').style.right = '-100px'
         toggle = false
     }else{
-        document.getElementById('navbar_center_mob').style.right = '0px'
-        document.getElementById('nav_cross').style.right = '10px'
+        document.getElementById('navbar_center_mob').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '0px'
+        document.getElementById('nav_cross').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '10px'
         toggle = true
     }
 }
