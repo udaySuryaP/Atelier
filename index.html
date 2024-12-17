@@ -171,6 +171,18 @@
             </div>
         </div>
     </section>
+
+    <section class="toggler_btn_container" >
+        <button onclick="toggle_frame_2(1)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_1" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+        <button onclick="toggle_frame_2(2)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_2" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+        <button onclick="toggle_frame_2(3)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_3" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+        <button onclick="toggle_frame_2(4)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_4" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+        <button onclick="toggle_frame_2(5)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_5" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+        <button onclick="toggle_frame_2(6)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_6" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+        <button onclick="toggle_frame_2(7)" class="toggle_btn toggle_btn_dot" id="toggle_btn_f2_7" style="width: 12px;height: 12px;border-radius: 12px; transition: 0.2s;" ></button>
+    </section>
+
+
     <section id="contact" data-aos="fade-up" class="contact" >
         <div data-aos="fade-up" class="contact-s-2">
             <p  >Let’s talk about <br> <span class="contact-s-2-collab" >Collaboration</span> </p>
@@ -249,6 +261,56 @@ const navToggle = () =>{
     }
 }
 navToggle()
+
+var index_2 = 1;
+
+
+    const toggle_frame_2 = (num) =>{
+
+    document.getElementById(`toggle_btn_f2_${index_2}`).style.backgroundColor = "#999999"
+    document.getElementById(`toggle_btn_f2_${index_2}`).style.scale = 1
+
+    if(num != 10 && num!= 20){
+
+        document.getElementById(`reel_container_${num}`).scrollIntoView({
+            behavior:'smooth',
+            inline:"center",
+            block:"center"
+        })
+        index_2 = num;
+        
+    }else{
+
+        console.log(index_2+1,index_2-1);
+        
+        if(num == 10 ){
+            document.getElementById(`reel_container_${index_2-1}`).scrollIntoView({
+                behavior:'smooth',
+                inline:"center",
+                block:"center"
+            })
+            index_2 = index_2 - 1
+            // console.log(index_2-1);
+            
+        }else if(num == 20 ){
+            document.getElementById(`reel_container_${index_2+1}`).scrollIntoView({
+                behavior:'smooth',
+                inline:"center",
+                block:"center"
+            })
+            index_2 = index_2 + 1
+            // console.log(index_2+1);
+            
+        }
+    }
+    document.getElementById(`toggle_btn_f2_${num > 7 ? index_2 : num}`).style.backgroundColor = "white"
+    document.getElementById(`toggle_btn_f2_${num > 7 ? index_2 : num}`).style.scale = 1.2
+
+    console.log(index_2);
+
+    }
+
+
 
 </script>
 

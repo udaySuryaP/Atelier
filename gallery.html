@@ -311,8 +311,6 @@ const navToggle = () =>{
 }
 // navToggle()
 
-
-
     var index = 1;
 
     const toggle_frame = (num) =>{
@@ -431,10 +429,7 @@ const navToggle = () =>{
 
     }
 
-
     const initial_run = ()=>{
-
-
 
         document.getElementById(`hero_b_box_5`).scrollIntoView({
             behavior:'smooth',
@@ -447,7 +442,6 @@ const navToggle = () =>{
         document.getElementById(`toggle_btn_5`).style.scale = 1.2
         
     }
-
     // initial_run()
 
     for (let i = 1; i <= 7; i++) {
@@ -488,8 +482,41 @@ const navToggle = () =>{
 
 }
 
+</script>
+<script type="module" src="./gallery_script.js">
+
+import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 
 
+const storage = getStorage();
+const folderRef = ref(storage, "Gallery Page Products/"); 
+
+async function fetchFileNamesAndLinks() {
+    console.log("stareted gett");
+    
+  try {
+    const result = await listAll(folderRef); 
+    const files = result.items;
+
+    const fileLinks = await Promise.all(
+      files.map(async (fileRef) => {
+        const url = await getDownloadURL(fileRef); 
+        return {
+          name: fileRef.name, 
+          link: url,          
+        };
+      })
+    );
+
+    console.log("Files in folder:", fileLinks);
+    return fileLinks;
+  } catch (error) {
+    console.error("Error fetching files:", error);
+  }
+}
+
+
+fetchFileNamesAndLinks();
 
 </script>
 </html>
