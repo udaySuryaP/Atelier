@@ -162,9 +162,7 @@ body{
 .toggle_btn i:hover{
     color: white;
 }
-.toggle_btn:first-child , .toggle_btn:last-child{
-    margin: 0px 14px;
-}
+
 .toggle_btn_dot{
     background-color:#999999;
 }
@@ -187,49 +185,7 @@ body{
 }
 
 
-.tes_bot_mar{
-    padding: 23px 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    background-color: #0D0D0D;
-    max-width: 40vw;
-    border-radius: 20px;
-    margin-left: 13px;
-}
-.tes_bot_mar_user{
-    display: flex;
-    align-items: center;
-    background-color: #0D0D0D;
-}
-.tes_bot_mar_user img{
-    width: 78px;
-    height: 78px;
-    margin-right: 12px;
-    border-radius: 50%;
-    background-color: white;
-}
-.tes_bot_mar_user_det_name{
-    font-size: 22px;
-    font-weight: 400;
-    background-color: #0D0D0D;
-}
-.tes_bot_mar_user_det_sub{
-    font-size: 16px;
-    font-weight: 400;
-    background-color: #0D0D0D;
-}
-.tes_bot_mar_cmt{
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 36px;
-    width: 100%;
-    white-space: normal;
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
-    background-color: #0D0D0D;
-}
+
 .container {
     overflow: scroll;
     margin-top: 57px;
@@ -238,7 +194,6 @@ body{
     scrollbar-width: none;
     -ms-overflow-style: none;
     height: 600px;
-    overflow: hidden;
   }
   
 .scroll-container{
@@ -295,150 +250,6 @@ body{
     align-items: center;
     flex-direction: column;
 }
-
-.reel_btns{
-    position: absolute;
-    z-index: 5;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: red;
-}
-.reel_btns button{
-    background-color: #99999982;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-}
-.reel_btns i{
-    color: rgba(255, 255, 255, 0.586);
-    scale: 1;
-    transform: 0.2s;
-}
-.reel_btns i:hover{
-    color: white;
-    scale: 1.2;
-}
-
-.wrapper {
-    width: 200px;
-    height: 60px;
-    position: relative;
-    z-index: 1;
-    top: 0px;
-  }
-  
-  .circle {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #fff;
-    left: 15%;
-    transform-origin: 50%;
-    animation: circle7124 .5s alternate infinite ease;
-  }
-  
-  @keyframes circle7124 {
-    0% {
-      top: 60px;
-      height: 5px;
-      border-radius: 50px 50px 25px 25px;
-      transform: scaleX(1.7);
-    }
-  
-    40% {
-      height: 20px;
-      border-radius: 50%;
-      transform: scaleX(1);
-    }
-  
-    100% {
-      top: 0%;
-    }
-  }
-  
-  .circle:nth-child(2) {
-    left: 45%;
-    animation-delay: .2s;
-  }
-  
-  .circle:nth-child(3) {
-    left: auto;
-    right: 15%;
-    animation-delay: .3s;
-  }
-  
-  .shadow {
-    width: 20px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 62px;
-    transform-origin: 50%;
-    z-index: -1;
-    left: 15%;
-    filter: blur(1px);
-    animation: shadow046 .5s alternate infinite ease;
-  }
-  
-  @keyframes shadow046 {
-    0% {
-      transform: scaleX(1.5);
-    }
-  
-    40% {
-      transform: scaleX(1);
-      opacity: .7;
-    }
-  
-    100% {
-      transform: scaleX(.2);
-      opacity: .4;
-    }
-  }
-  
-  .shadow:nth-child(4) {
-    left: 45%;
-    animation-delay: .2s
-  }
-  
-  .shadow:nth-child(5) {
-    left: auto;
-    right: 15%;
-    animation-delay: .3s;
-  }
-  
-.container {
-    overflow: scroll;
-    margin-top: 57px;
-    padding-left: 58px;
-    padding-right: 58px;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none;
-  }
-  
-.scroll_container_frame{
-    display: flex;
-    overflow-x: scroll;
-    width: fit-content;
-    gap: 22px;
-    background-color: red;
-    padding: 58px;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
-}
-.scroll-container_frame::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
-}
-.scroll-container_frame::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
-}
-
 
 
 .frame{
