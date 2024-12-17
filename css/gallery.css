@@ -106,10 +106,6 @@ body{
     height: 881px;
     margin-top: -280px;
 }
-
-  
-
-
 .hero_bottom{
     /* background-color: red; */
     padding: 0px 58px;
@@ -302,12 +298,14 @@ body{
 
 .reel_btns{
     position: absolute;
+    z-index: 5;
     top: 10px;
     right: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: red;
 }
 .reel_btns button{
     background-color: #99999982;

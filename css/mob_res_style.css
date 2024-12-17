@@ -178,7 +178,7 @@ body{
     margin-top: 13px;
 }
 .ser_img img{
-    width: 100%;
+    width: 378px;
     height: auto;
     background-color: white;
     border-radius: 20px;
@@ -188,6 +188,7 @@ body{
     border-radius:15px ;
     background-size: cover;
     height: 192px;
+    max-width: 378px;
 }
 .ser_img_container p{
     font-size: 26px;
@@ -196,6 +197,16 @@ body{
     padding-top: 117px;
     padding-left: 9px;
     padding-bottom: 10px;
+}
+.ser_img_container_1{
+    align-self: center;
+    justify-self: center;
+    display: flex;
+}
+.ser_img_container_2{
+    align-self: center;
+    justify-self: center;
+    display: flex;
 }
 .tes_top{
     margin: 12px 12px;
