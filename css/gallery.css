@@ -154,14 +154,6 @@ body{
     background-color: #00000000;
     border: none;
 }
-.toggle_btn i{
-    color: #999999;
-    font-size: 24px;
-    transition: 0.2s;
-}
-.toggle_btn i:hover{
-    color: white;
-}
 
 .toggle_btn_dot{
     background-color:#999999;
@@ -281,10 +273,24 @@ body{
     display: none; 
 }
 .frame_box{
-    background-color: red;
-    width: 1000px;
-    height: 100px;
+    width: 1426px;
+    height: 548px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
 }
+.frame_box_s_1{
+    width: 549px;
+    height: 549px;
+}
+.frame_box_s_2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 549px;
+    max-height: 549px;
+}
+
 footer{
     display: flex;
     flex-direction: column;

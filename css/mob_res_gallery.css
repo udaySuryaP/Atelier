@@ -137,7 +137,6 @@
         /* background-color: red; */
         padding: 0px 12px;
         margin-top: 40px;
-        background-color: blue;
     }
     .frame_container{
         padding-left: 0px;
@@ -145,6 +144,36 @@
         gap: 20px;
     }
 
+    .frame_box{
+        width: fit-content;
+        height: auto;
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+
+    }
+    .frame_box_s_1{
+        display: none;
+    }
+    .frame_box_s_2{
+        max-width: 374px;
+        max-height: 374px;
+        overflow: hidden;
+    }
+    .frame_box_s_2 img{
+        max-width: 374px;
+        max-height: 374px;
+    }
+    .frame_box_s_3{
+        display: none;
+    }
+
+    .toggler_btn_container_3{
+        max-width: 90vw;
+        overflow: scroll;
+        margin-left: 5vw;
+        gap: 5px;
+    }
     footer{
         display: flex;
         flex-direction: column;
