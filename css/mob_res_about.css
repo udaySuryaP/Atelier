@@ -75,6 +75,7 @@
        width: auto;
        height: 32px;
     }
+
     .hero_top{
         margin: 0px 12px;
         padding-top: 150px;
@@ -87,93 +88,98 @@
         margin-top: 24px;
         max-width: 80vw;
     }
-    .video-container{
-        width: 377px;
-        height: 282px;
-        overflow: hidden;
-        background-color: #999999;
-    }
-    .video-container video{
-        margin-left: -65px;
-    }
     .hero_bottom{
-        padding: 0px 12px;
-        overflow-x: hidden;
-    }
-    .hero_bottom_container{
-        margin-top: 16px;
-        padding-left: 10px;
-        padding-right: 10px;
-        gap: 44px;
-    }
-    .hero_b_b_main{
-        font-size: 18px;
-    }
-    .hero_b_b_sub{
-        font-size: 12px;
-    }
-    
-    .tes_top{
-        margin: 0px 12px;
-    }
-    .tes_top_main{
-        font-size: 22px;
-    }
-    .tes_top_sub{
-        font-size: 12px;
-        margin-top: 11px;
-    }
-    .container {
-        padding-left: 12px;
-        padding-right: 12px;
-      } 
-    .scroll-container{
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-    
-
-    .frame{
-        /* background-color: red; */
-        padding: 0px 12px;
-        margin-top: 40px;
-    }
-    .frame_container{
-        padding-left: 0px;
-        padding-right: 10px;
-        gap: 20px;
-    }
-
-    .frame_box{
         width: fit-content;
-        height: auto;
         display: flex;
-        gap: 10px;
-        overflow: hidden;
-
-    }
-    .frame_box_s_1{
-        display: none;
-    }
-    .frame_box_s_2{
-        max-width: 374px;
-        max-height: 374px;
-        overflow: hidden;
-    }
-    .frame_box_s_2 img{
-        max-width: 374px;
-        max-height: 374px;
-    }
-    .frame_box_s_3{
-        display: none;
-    }
-
-    .toggler_btn_container_3{
+        flex-direction: row;
+        gap: 73px;
+        overflow-x: scroll;
         max-width: 90vw;
-        overflow: scroll;
-        margin-left: 5vw;
-        gap: 5px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
+    .hero_bottom::-webkit-scrollbar {
+        display: none; 
+    }
+    .hero_b_col{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: fit-content;
+        gap: 73px;
+    }
+    .hero_b_col:nth-child(1){
+        padding-left: 7vw;
+    }
+    .hero_b_col:nth-child(2){
+        width: fit-content;
+        padding-right: 40px;
+    }
+    
+    .mem_list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 24px;
+    }
+    .mem_list img{
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        background-color: white;
+    }
+    .mem_list button{
+        background-color: #00000000;
+        border: none;
+        outline: none;
+    }
+    .mem_list li{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .vision{
+        margin-top: 90px;
+    }
+    .vis_head{
+        font-size: 16px;
+    }
+    .vis_sub{
+        font-size: 20px;
+    }
+    
+    .team{
+        margin-top: 90px;
+    }
+    .team_head{
+        font-size: 22px;
+        font-weight: 400;
+        font-family: "Instrument Serif", serif;
+        font-style: italic;
+    }
+    .team_sub{
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 22px;
+    }
+    
+    
+    .team_box{
+        height: 116px;
+        padding: 16px;
+        width: 88vw;
+    }
+
+    .team_b_right{
+        height: 100%;
+    }
+    .team_b_l_top{
+        text-align: left;
+    }
+
+
+
+
     footer{
         display: flex;
         flex-direction: column;

@@ -12,7 +12,7 @@
 <body>
     <ul id="navbar_center_mob" class="navbar_center_mob" >
         <li><a href="./index.html">Home</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="./about.html">About Us</a></li>
         <!-- <li><a href="#">Services</a></li> -->
         <li><a href="./gallery.html">Gallery</a></li>
         <li><a href="./blog.html">Blog</a></li>
@@ -24,7 +24,7 @@
         <img src="./assets/img/Navbar_brand.png" alt="">
         <ul class="navbar_center" >
             <li><a href="./index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="./about.html">About Us</a></li>
             <!-- <li><a href="#ser">Services</a></li> -->
             <li><a href="./gallery.html">Gallery</a></li>
             <li><a href="./blog.html">Blog</a></li>
@@ -545,18 +545,8 @@
 
 <script>
 
-const navToggle = () =>{
-    if(toggle){
-        document.getElementById('navbar_center_mob').style.right = '-500px'
-        document.getElementById('nav_cross').style.right = '-100px'
-        toggle = false
-    }else{
-        document.getElementById('navbar_center_mob').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '0px'
-        document.getElementById('nav_cross').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '10px'
-        toggle = true
-    }
-}
-// navToggle()
+    toggle = true;
+
 
     var index = 1;
 
