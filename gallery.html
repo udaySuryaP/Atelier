@@ -40,9 +40,11 @@
         </div>
         <div class="hero_bottom">
             <div class="hero_bottom_container">
+
+
                 <div class="hero-b-box" id="hero_b_box_1" >
                     <div class="video-container">
-                        <video data-aos="fade-up" autoplay muted loop >
+                        <video id="Video_1" data-aos="fade-up"  muted loop  >
                             <source src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Gallery%20Page%20Ad%20films%2FDestrezza%20Final%20FN.mp4?alt=media&token=947ab0eb-9879-483f-b385-cf8fea4ad4fd" type="video/mp4">
                         </video>
                     </div>
@@ -51,12 +53,11 @@
                 </div>
                 <div class="hero-b-box" id="hero_b_box_2" >
                     <div class="video-container">
-                        <video data-aos="fade-up" autoplay muted loop >
+                        <video id="Video_2" data-aos="fade-up"  muted loop >
                             <source src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Gallery%20Page%20Ad%20films%2FSalkar%20Kitchen.mp4?alt=media&token=c9def14d-5f09-4f35-95c2-ce2a877e7e44" type="video/mp4">
                         </video>
                     </div>
                     <p class="hero_b_b_main">Salkar Kitchen</p>
-                    <!-- <p class="hero_b_b_sub">LOREM IMPUSUM</p> -->
                 </div>
                 
             </div>
@@ -553,6 +554,23 @@
 <script>
 
 var toggle = true;
+
+// const set_hover_effect = () =>{
+
+//     var video_1 = document.getElementById('Video_1')
+//     video_1.addEventListener('mouseover',function(){
+//         console.log("mouseover");
+        
+//         this.play();
+//     })
+
+//     video_1.addEventListener('mouseout',function(){
+//         console.log("mouse out");
+        
+//         this.pause();
+//     })
+// }
+// set_hover_effect()
 
 const navToggle = () =>{
     if(toggle){
