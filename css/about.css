@@ -100,11 +100,15 @@ body{
     align-items: center;
     gap: 43px;
 }
-
+.hero_b_box{
+    max-width: 314px;
+    overflow: hidden;
+}
 .hero_b_box img{
-    width: 314px;
+    width: auto;
     height: 359px;
     margin-bottom: 17px;
+    filter: grayscale(100%);
 }
 .hero_b_b_name{
     font-size: 24px;

@@ -97,14 +97,15 @@ body{
     margin-top: 24px;
 }
 .video-container{
+    width: fit-content;
+    overflow: hidden;
+    /* background-color: #999999; */
     width: 481px;
     height: 291px;
-    overflow: hidden;
-    background-color: #999999;
 }
 .video-container video{
-    height: 881px;
-    margin-top: -280px;
+    height: 100%;
+    width: 100%;
 }
 .hero_bottom{
     /* background-color: red; */
@@ -112,11 +113,9 @@ body{
 }
 .hero_bottom_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 111px;
-    padding-left: 350px;
-    padding-right: 350px;
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -185,7 +184,7 @@ body{
     padding-right: 58px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    height: 600px;
+    height: 550px;
   }
   
 .scroll-container{
@@ -219,7 +218,7 @@ body{
 }
 .reel_container video{
     width: 300px;
-    height: auto;
+    height: 550px;
     position: relative;
     transition: 0.3s;
     display: none;
@@ -227,22 +226,21 @@ body{
     opacity: 0;
     border-radius: 20px;
 }
-.reel_loader{
-    position: relative;
-    height: 550px;
-    top: 0px;
-    width: 100%;
-    background-color: #212121;
-    border-radius: 20px;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
+
+.reel_mute_btn{
+    position: absolute;
+    bottom: 0px;
+    display: none;
+    background-color: #ffffff3a;
+    margin: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
 
 .frame{
     /* background-color: red; */
