@@ -22,7 +22,7 @@
 
     <section data-aos="fade-up" class="hero" >
         <section class="navbar" >
-            <img src="./assets/img/Navbar_brand.png" alt="">
+            <a href="#"><img src="./assets/img/Navbar_brand.png" alt=""></a>
             <ul class="navbar_center" >
                 <li><a href="#">Home</a></li>
                 <li><a href="./about.html">About Us</a></li>
@@ -216,6 +216,15 @@
 <script>
 
 
+const contact = () => {
+    document.getElementById('contact').scrollIntoView({
+        behavior:"smooth",
+        inline:"center",
+        block:"center"
+    })
+}
+ 
+
 
 for (let i = 1; i <= 7; i++) {
     document.getElementById(`reel_container_${i}`).addEventListener('mouseenter', function() {
@@ -274,7 +283,7 @@ var index_2 = 1;
 
         document.getElementById(`reel_container_${num}`).scrollIntoView({
             behavior:'smooth',
-            inline:"center",
+            // inline:"center",
             block:"center"
         })
         index_2 = num;

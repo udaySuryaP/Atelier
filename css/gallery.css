@@ -52,7 +52,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 40vw;
+    width: 32vw;
     background-color: #ffffff00;
 }
 .navbar_center li{
@@ -193,8 +193,8 @@ body{
     overflow-x: scroll;
     width: fit-content;
     gap: 13px;
-    padding-right: 500px;
-    padding-left: 500px;
+    padding-right: 58px;
+    padding-left: 0px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     max-height: 550px;

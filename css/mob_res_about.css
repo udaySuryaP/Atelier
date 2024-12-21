@@ -40,7 +40,7 @@
         text-decoration: none;
         background-color: #00000000;
     }
-    .navbar a{
+    .navbar ul li a{
         display: none;
     }
     .nav_con{
@@ -78,7 +78,7 @@
 
     .hero_top{
         margin: 0px 12px;
-        padding-top: 150px;
+        margin-top: 150px;
     }
     .hero_top_main{
         font-size: 22px;
@@ -150,6 +150,9 @@
     
     .team{
         margin-top: 90px;
+    }
+    .team_box:last-child{
+        height: 146px;
     }
     .team_head{
         font-size: 22px;

@@ -39,7 +39,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 40vw;
+    width: 32vw;
     background-color: #ffffff00;
 }
 .navbar_center li{
@@ -73,7 +73,7 @@ body{
 .hero_top{
     margin: 0px 58px;
     /* margin-top: 78px; */
-    padding-top: 150px;
+    margin-top: 150px;
 }
 .hero_top_main{
     font-size: 48px;
@@ -92,12 +92,13 @@ body{
     margin-top: 62px;
     display: flex;
     flex-direction: column;
-    gap: 73px;
+    gap: 43px;
 }
 .hero_b_col{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 43px;
 }
 
 .hero_b_box img{
@@ -163,7 +164,7 @@ body{
     background-color: white;
     color: black;
     width: 80vw;
-    height: 146px;
+    height: 106px;
     display: flex;
     justify-content: space-between;
     align-items: center;

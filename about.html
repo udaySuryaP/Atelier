@@ -19,21 +19,19 @@
         <li><a href="./blog.html">Blog</a></li>
     </ul>
     <button onclick="navToggle()" id="nav_cross" class="nav_cross" ><img src="./assets/img/Arrow_4_white.png" alt=""></button>
-
-    <section data-aos="fade-up" class="hero" >
-        <section class="navbar" >
-            <img src="./assets/img/Navbar_brand.png" alt="">
-            <ul class="navbar_center" >
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <!-- <li><a href="#ser">Services</a></li> -->
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-            </ul>
-            <a class="nav_con" href="#contact">Contact Us</a>
-            <button onclick="navToggle()" class="nav_ham" ><img src="./assets/img/ham.png" alt=""></button>
-        </section>
+    <section class="navbar" >
+        <a href="./index.html"><img src="./assets/img/Navbar_brand.png" alt=""></a>
+        <ul class="navbar_center" >
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <!-- <li><a href="#ser">Services</a></li> -->
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+        </ul>
+        <a class="nav_con" href="./index.html#contact">Contact Us</a>
+        <button onclick="navToggle()" class="nav_ham" ><img src="./assets/img/ham.png" alt=""></button>
     </section>
+   
 
     <section data-aos="fade-up" >
         <div class="hero_top">
@@ -46,34 +44,34 @@
     <section data-aos="fade-up" class="hero_bottom">
 
         <div class="hero_b_col">
-            <div class="hero_b_box">
-                <img src="" alt="">
+            <div id="hero_b_box_1" class="hero_b_box">
+                <img style="background-color: red;" src="" alt="">
                 <p class="hero_b_b_name">Vivek</p>
                 <p class="hero_b_b_pos">Vivek</p>
             </div>
     
-            <div class="hero_b_box">
-                <img src="" alt="">
+            <div id="hero_b_box_2" class="hero_b_box">
+                <img style="background-color: blue;" src="" alt="">
                 <p class="hero_b_b_name">Vivek</p>
                 <p class="hero_b_b_pos">Vivek</p>
             </div>
     
-            <div class="hero_b_box">
-                <img src="" alt="">
+            <div id="hero_b_box_3" class="hero_b_box">
+                <img style="background-color: white;" src="" alt="">
                 <p class="hero_b_b_name">Vivek</p>
                 <p class="hero_b_b_pos">Vivek</p>
             </div>
         </div>
 
         <div class="hero_b_col">
-            <div class="hero_b_box">
-                <img src="" alt="">
+            <div id="hero_b_box_4" class="hero_b_box">
+                <img style="background-color: green;" src="" alt="">
                 <p class="hero_b_b_name">Vivek</p>
                 <p class="hero_b_b_pos">Vivek</p>
             </div>
     
-            <div class="hero_b_box">
-                <img src="" alt="">
+            <div id="hero_b_box_5" class="hero_b_box">
+                <img style="background-color: yellow;" src="" alt="">
                 <p class="hero_b_b_name">Vivek</p>
                 <p class="hero_b_b_pos">Vivek</p>
             </div>
@@ -83,11 +81,11 @@
 
     </section>
     <ul data-aos="fade-up" class="mem_list">
-        <li><button><img src="" alt=""></button></li>
-        <li><button><img src="" alt=""></button></li>
-        <li><button><img src="" alt=""></button></li>
-        <li><button><img src="" alt=""></button></li>
-        <li><button><img src="" alt=""></button></li>
+        <li><button onclick="changeImg(1)" ><img src="" alt=""></button></li>
+        <li><button onclick="changeImg(2)" ><img src="" alt=""></button></li>
+        <li><button onclick="changeImg(3)" ><img src="" alt=""></button></li>
+        <li><button onclick="changeImg(4)" ><img src="" alt=""></button></li>
+        <li><button onclick="changeImg(5)" ><img src="" alt=""></button></li>
     </ul>
 
     <section data-aos="fade-up" class="vision">
@@ -99,7 +97,7 @@
         <p class="team_head">Join our team</p>
         <p class="team_sub">We Are Proudly Hiring: Join Us in Shaping the Future of Success</p>
 
-        <a href="#" style="margin-top: 39px;" class="team_box">
+        <a href="./blog.html" style="margin-top: 39px;" class="team_box">
             <div class="team_b_left">
                 <div class="team_b_l_top">
                     <p style="font-size: 12px;font-weight: 600;" >Design</p>
@@ -116,7 +114,7 @@
             </div>
         </a>
 
-        <a href="#" class="team_box">
+        <a href="./blog.html" class="team_box">
             <div class="team_b_left">
                 <div class="team_b_l_top">
                     <p style="font-size: 12px;font-weight: 600;" >Development</p>
@@ -133,7 +131,7 @@
             </div>
         </a>
 
-        <a href="#" style="height: 146px;" class="team_box">
+        <a href="./blog.html" class="team_box">
             <div class="team_b_left">
                 <div class="team_b_l_top">
                     <p style="font-size: 12px;font-weight: 600;" >Management</p>
@@ -164,6 +162,15 @@
 </body>
 
 <script>
+
+const changeImg = (num) =>{
+    document.getElementById(`hero_b_box_${num}`).scrollIntoView({
+        behavior: 'smooth',
+        inline:"center",
+        block:"center"
+    })
+}
+
 var toggle = true;
 
 const navToggle = () =>{
