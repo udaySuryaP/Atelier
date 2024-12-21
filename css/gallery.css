@@ -103,9 +103,12 @@ body{
     width: 481px;
     height: 291px;
 }
+
 .video-container video{
     height: 100%;
     width: 100%;
+    display: none;
+    transition: 0.5s;
 }
 .hero_bottom{
     /* background-color: red; */
@@ -274,7 +277,7 @@ body{
     width: 1426px;
     height: 548px;
     display: flex;
-    gap: 10px;
+    gap: 0px;
     overflow: hidden;
 }
 .frame_box_s_1{
