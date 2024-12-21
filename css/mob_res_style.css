@@ -41,7 +41,7 @@ body{
 }
 
 
-.navbar a{
+.navbar ul li a{
     display: none;
 }
 .nav_con{

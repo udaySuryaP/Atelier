@@ -226,6 +226,7 @@
 
 <script>
 
+var toggle = true;
 
 const contact = () => {
     document.getElementById('contact').scrollIntoView({
@@ -241,7 +242,20 @@ const unMute = (num) => {
     console.log(video.muted);
     
 }
-
+const navToggle = () =>{
+    console.log(toggle);
+    
+    if(toggle){
+        document.getElementById('navbar_center_mob').style.right = '-500px'
+        document.getElementById('nav_cross').style.right = '-100px'
+        toggle = false
+    }else{
+        document.getElementById('navbar_center_mob').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '0px'
+        document.getElementById('nav_cross').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '10px'
+        toggle = true
+    }
+}
+navToggle()
 
 for (let i = 1; i <= 7; i++) {
     document.getElementById(`reel_container_${i}`).addEventListener('mouseenter', function() {
@@ -284,20 +298,8 @@ for (let i = 1; i <= 7; i++) {
     });
 }
 
-var toggle = true;
 
-const navToggle = () =>{
-    if(toggle){
-        document.getElementById('navbar_center_mob').style.right = '-500px'
-        document.getElementById('nav_cross').style.right = '-100px'
-        toggle = false
-    }else{
-        document.getElementById('navbar_center_mob').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '0px'
-        document.getElementById('nav_cross').style.right = window.innerWidth > 480 && window.innerWidth < 1120 ? '15%' : '10px'
-        toggle = true
-    }
-}
-navToggle()
+
 
 var index_2 = 1;
 
