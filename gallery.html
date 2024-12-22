@@ -41,26 +41,32 @@
         <div class="hero_bottom">
             <div class="hero_bottom_container">
 
-
                 <div class="hero-b-box" id="hero_b_box_1" >
-                    <div id="video_container_1" class="video-container">
-                        <!-- <video id="Video_1" data-aos="fade-up"  muted loop  >
+                    <button onclick="toggle_view(1)" id="video_container_1" class="video-container">
+
+                        <video id="Video_1" data-aos="fade-up" autoplay muted loop  >
                             <source src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Gallery%20Page%20Ad%20films%2FDestrezza%20Final%20FN.mp4?alt=media&token=947ab0eb-9879-483f-b385-cf8fea4ad4fd" type="video/mp4">
-                        </video> -->
-                        <img height="100%" src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Ad%20films%20thumbnail%2FAd-Destrezza.jpg?alt=media&token=72c57c00-4a83-4370-b6b1-3476a8ad7f8b" alt="">
-                    </div>
+                        </video>
+                        <img id="video_thumb_1" height="100%" src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Ad%20films%20thumbnail%2FAd-Destrezza.jpg?alt=media&token=72c57c00-4a83-4370-b6b1-3476a8ad7f8b" alt="">
+                        <button onclick="unMute_hero(1)" class="hero_mute_btn" id="hero_mute_btn_1" ><i class="fa-solid fa-volume-high"></i></button>
+
+                    </button>
                     <p class="hero_b_b_main">Destrezza</p>
                     <p class="hero_b_b_sub">INNOVATIONS AT YOUR FINGER TIPS</p>
                 </div>
                 <div class="hero-b-box" id="hero_b_box_2" >
-                    <div id="videoVcontainer_2" class="video-container">
-                        <img id="hero_box_img_2" class="hero_box_img" src="" alt="">
-                        <!-- <video id="Video_2" data-aos="fade-up"  muted loop >
+                    <button onclick="toggle_view(2)" id="videoVcontainer_2" class="video-container">
+
+                        <video id="Video_2" data-aos="fade-up" autoplay muted loop >
                             <source src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Gallery%20Page%20Ad%20films%2FSalkar%20Kitchen.mp4?alt=media&token=c9def14d-5f09-4f35-95c2-ce2a877e7e44" type="video/mp4">
-                        </video> -->
-                        <img height="100%" src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Ad%20films%20thumbnail%2FAd-Salkaar.jpg?alt=media&token=bc383d56-9552-4cca-b459-0a8364b3b0bb" alt="">
-                    </div>
+                        </video>
+                        <img id="video_thumb_2" height="100%" src="https://firebasestorage.googleapis.com/v0/b/atelieradsventure-23d76.firebasestorage.app/o/Ad%20films%20thumbnail%2FAd-Salkaar.jpg?alt=media&token=bc383d56-9552-4cca-b459-0a8364b3b0bb" alt="">
+                        <button onclick="unMute_hero(2)" class="hero_mute_btn" id="hero_mute_btn_2" ><i class="fa-solid fa-volume-high"></i></button>
+
+
+                    </button>
                     <p class="hero_b_b_main">Salkar Kitchen</p>
+                    <p class="hero_b_b_sub" >DISCOVER THE RICHES OF 80-YEAR OLD FLAVOURS</p>
                 </div>
                 
             </div>
@@ -565,24 +571,59 @@
 
 <script>
 
+    var toggle_view_mode = false;
+
+    const toggle_view = (num) =>{
+        const video = document.getElementById(`Video_${num}`)
+        const img = document.getElementById(`video_thumb_${num}`)
+        const video_mute_btn = document.getElementById(`hero_mute_btn_${num}`)
+
+        console.log("toggle",toggle_view_mode);
+        
+        if(toggle_view_mode){
+            video.pause();
+            video.style.opacity = '0'
+            video_mute_btn.style.opacity = '0'
+
+            setTimeout(() => {
+                video.style.visibility = 'hidden'
+                video.style.display = 'none'
+
+                video_mute_btn.style.display = 'none'
+                video_mute_btn.style.visibility = 'hidden'
+            }, 500);
+
+            img.style.opacity = '1'
+
+            setTimeout(() => {
+                img.style.display = 'flex'
+                img.style.visibility = 'visible'
+            }, 500);
+        }else{
+            video.play()
+            video.style.opacity = '1'
+            video_mute_btn.style.opacity = '1'
+
+            setTimeout(() => {
+                video.style.visibility = 'visible'
+                video.style.display = 'flex'
+
+                video_mute_btn.style.display = 'flex'
+                video_mute_btn.style.visibility = 'visible'
+            }, 500);
+
+            img.style.opacity = '0'
+
+            setTimeout(() => {
+                img.style.display = 'none'
+                img.style.visibility = 'hidden'
+            }, 500);
+        }
+
+        toggle_view_mode = !toggle_view_mode
+    }
+ 
 var toggle = true;
-
-// const set_hover_effect = () =>{
-
-//     var video_1 = document.getElementById('Video_1')
-//     video_1.addEventListener('mouseover',function(){
-//         console.log("mouseover");
-        
-//         this.play();
-//     })
-
-//     video_1.addEventListener('mouseout',function(){
-//         console.log("mouse out");
-        
-//         this.pause();
-//     })
-// }
-// set_hover_effect()
 
 const navToggle = () =>{
     if(toggle){

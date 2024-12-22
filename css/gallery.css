@@ -99,16 +99,46 @@ body{
 .video-container{
     width: fit-content;
     overflow: hidden;
-    /* background-color: #999999; */
     width: 481px;
-    height: 291px;
+    height: 251px;
+    border: none;
+    outline: none;
+    background-color: #00000000;
 }
 
 .video-container video{
     height: 100%;
-    width: 100%;
+    width: 100vw;
     display: none;
+    opacity: 0;
+    visibility: hidden;
     transition: 0.5s;
+}
+.video-container img{
+    background-color: gray;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    display: flex;
+    height: 251px;
+}
+.hero_mute_btn{
+    display: none;
+    position:relative;
+    left: 20px;
+    top: 0px;
+    margin: 0px;
+    margin-top: -70px;
+    z-index: 3;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #000000;
+    color: #ffffff40;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
 }
 .hero_bottom{
     /* background-color: red; */
@@ -257,7 +287,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 170px;
+    padding-left: 0px;
     padding-right: 250px;
     overflow: scroll;
     gap: 32px;
