@@ -202,3 +202,50 @@
     }
 }
     
+@media (max-width:1120px) and (min-width:480px) {
+    body{
+        background-color: black;
+    }
+    *{
+        opacity: 0;
+    }
+    .navbar{
+        display: none;
+    }
+    
+    .navbar_center_mob{
+        display: none;
+    }
+    .nav_con{
+        display: none;
+    }
+    .nav_ham{
+       display: none;
+    }
+    .nav_cross{
+        display: none;
+    }
+
+    .hero{
+        display: none;
+    }
+
+    .tes_top{
+        display: none;
+    }
+    .container{
+        display: none;
+    }
+    .frame{
+        display: none;
+    }
+    .toggler_btn_container{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .alert{
+        display: none;
+    }
+}

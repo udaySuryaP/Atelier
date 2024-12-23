@@ -385,79 +385,49 @@ footer img{
 }
 
 @media (max-width:1120px) and (min-width:480px) {
-    .navbar{
-        height: 76px;
-        width: 100vw;
-    }
-    .navbar img{
-        height: 47px;
-        margin-left: 1vh;
-    }
-    .navbar_center_mob{
-        display: flex;
-        flex-direction:column ;
-        position: fixed;
+    body{
         background-color: black;
-        /* height: 100vh; */
-        padding-top: 150px;
-        padding-bottom: 1000px;
-        padding-right: 80px;
-        padding-left: 80px;
-        top: 0px;
-        right: 0px;
-        z-index: 1;
-        transition: 0.3s;
     }
-    .navbar_center_mob li{
-        text-decoration: none;
-        list-style: none;
-        font-weight: 500;
-        background-color: #ffffff00;
-        margin-top: 20px;
-        text-align: right;
+    *{
+        opacity: 0;
     }
-    .navbar_center_mob li a{
-        color: white;
-        text-decoration: none;
-        background-color: #00000000;
+    .navbar{
+        display: none;
     }
     
-    
-    .navbar a{
+    .navbar_center_mob{
         display: none;
     }
     .nav_con{
         display: none;
     }
     .nav_ham{
-       display: flex;
-       background-color: #00000000;
-       border: 0px black solid;
-       margin-right: 25px;
+       display: none;
     }
     .nav_cross{
-        display: flex;
-        width: 100px;
-        height: auto;
-        position: fixed;
-        z-index: 5;
-        top: 50px;
-        right: 10px;
-        background-color: #00000000;
-        border: 0px white solid;
-        transition: 0.3s;
+        display: none;
     }
-    .nav_cross img{
-        width: 50px;
-        height: auto;
-        transform: rotate(180deg);
+
+    .hero{
+        display: none;
     }
-    .nav_ham img{
-       width: auto;
-       height: 32px;
+
+    .tes_top{
+        display: none;
     }
-    .video-container{
-        height: 115vh;
-        width: 100vw;
+    .container{
+        display: none;
+    }
+    .frame{
+        display: none;
+    }
+    .toggler_btn_container{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .alert{
+        display: none;
     }
 }
